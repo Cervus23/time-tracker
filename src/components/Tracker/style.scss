@@ -1,0 +1,84 @@
+@import "../../mixins.scss";
+
+.tracker-container {
+  display: flex;
+  height: 62px;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+
+  &.active {
+    background-color: #fdfdf6;
+    .tracker-info {
+      color: #3faf6c;
+    }
+  }
+  .tracker-info {
+    display: flex;
+    flex-grow: 1;
+    min-width: 0;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 20px;
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 65px;
+    font-weight: 700;
+    .tracker-name {
+      // flex-grow: 1;
+      min-width: 0;
+      max-width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .tracker-time {
+      min-width: 0;
+
+      // display: flex;
+      // flex-grow: 1;
+      // justify-content: flex-end;
+    }
+  }
+
+  .btns {
+    width: 65px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 8px;
+    .btn {
+      width: 25px;
+      height: 25px;
+      border: none;
+      outline: none;
+      padding: 0;
+    }
+    .pause {
+      background: url("../../img/pause-tracker.svg") no-repeat center center;
+      background-size: 120%;
+    }
+    .play {
+      background: url("../../img/play-tracker.svg") no-repeat center center;
+      background-size: 120%;
+    }
+    .remove-tracker {
+      background: url("../../img/remove-tracker.svg") no-repeat center center;
+      background-size: 120%;
+    }
+  }
+
+  @include phone {
+    .tracker-info {
+      font-size: 13px;
+      padding-left: 12px;
+      .tracker-name {
+        font-weight: 400;
+      }
+    }
+    .btns {
+      margin-right: 14px;
+    }
+  }
+}
