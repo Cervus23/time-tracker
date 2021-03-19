@@ -1,3 +1,5 @@
+@import "../../mixins.scss";
+
 .tracker-box {
   display: flex;
   flex-direction: column;
@@ -10,5 +12,9 @@
     font-size: 48px;
     line-height: 65px;
     font-weight: 700;
+  }
+
+  @include phone {
+    width: 100%;
   }
 }
