@@ -29,10 +29,10 @@
     border-radius: 50%;
     border: none;
     outline: none;
-  }
-  :active {
-    background-color: #34935a;
-    background-position: 65%;
+    &:active {
+      background-color: #34935a;
+      background-position: 65%;
+    }
   }
 
   @include phone {
